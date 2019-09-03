@@ -1,9 +1,9 @@
-Certbot Plugin Snaps
+# Certbot Plugin Snaps
 
 This is a proof of concept of how a Certbot snap might support plugin snaps
 that add functionality to Certbot using its existing plugin API.
 
-Architecture
+## Architecture
 
 This is a description of how Certbot plugin functionality is exposed via snaps.
 For information on Certbot's plugin architecture itself, see the [Certbot
@@ -23,7 +23,7 @@ The Certbot snap runs Certbot via a wrapper which examines its list of
 connected interfaces, sets `CERTBOT_PLUGIN_PATH` accordingly, and then `exec`s
 Certbot itself.
 
-Use (Production)
+## Use (Production)
 
 _Note: this production use example assumes that these snaps are available in
 stable channels in the Snap Store, which they aren't yet. See below for
@@ -48,7 +48,7 @@ that this has worked, `certbot plugins` should list the plugin.
 
 You can now operate the plugin as normal.
 
-Use (Testing and Development)
+## Use (Testing and Development)
 
 To try this out, you'll need to build the snaps (a patched Certbot snap and a
 plugin snap) manually.
@@ -69,7 +69,7 @@ plugin snap) manually.
  14. Connect the plugin with `sudo snap connect certbot:plugin certbot-dns-dnsimple`.
  15. Now you can run Certbot as normal. For example, `certbot plugins` should display the DNSimple plugin as installed.
 
-Code
+## Code
 
 This proof of concept ships four git branches:
 
@@ -86,7 +86,7 @@ Snap packaging is intended to be maintained within upstream code trees
 themselves with the addition of `snapcraft.yaml`, much like Travis CI
 integration.
 
-Publishing Permissions
+## Publishing Permissions
 
 There are security implications to permitting anyone to publish, without
 review, a plugin into the Snap Store which will then run in Certbot's classic
@@ -105,6 +105,6 @@ interfaces can or cannot be set to be automatically connected.
 It seems fairly clear that, at a minimum, a manual connection between snaps
 coming from the same publisher will be permitted.
 
-Outstanding issues
+## Outstanding issues
 
 [Outstanding items relating to plugin support in Certbot snaps are tracked on GitHub](https://github.com/basak/certbot-snap-build/issues?q=is%3Aissue+is%3Aopen+label%3Aplugin).
