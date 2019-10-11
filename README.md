@@ -54,7 +54,7 @@ To try this out, you'll need to build the snaps (a patched Certbot snap and a
 plugin snap) manually.
 
  1. Start with a Xenial VM.
- 2. Install snapcraft with `snap install --classic certbot`.
+ 2. Install snapcraft with `snap install --classic snapcraft`.
  3. Run `git clone git://github.com/basak/certbot-snap-build -b snap-plugins/snap/certbot`.
  4. `cd certbot-snap-build`
  5. Run `git clone https://github.com/basak/certbot-snap-build -b snap-plugins/certbot certbot` (this is a workaround for #13).
