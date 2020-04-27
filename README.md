@@ -62,7 +62,7 @@ These steps need to be done once to set up your VM and do not need to be run aga
  3. Set up lxd for use with snapcraft by running `sudo snap install lxd && sudo /snap/bin/lxd.migrate -yes && sudo /snap/bin/lxd waitready && sudo /snap/bin/lxd init --auto`
  4. Install snapcraft with `snap install --classic snapcraft`.
  5. `cd ~` (or any other directory where you want our source files to be)
- 6. Run `git clone git://github.com/certbot/certbot -b snap-plugins`
+ 6. Run `git clone git://github.com/certbot/certbot -b snap-plugin`
  7. `cd certbot`
 
 ### Build the Snaps
