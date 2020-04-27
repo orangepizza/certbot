@@ -5,13 +5,13 @@ summary: DNSimple DNS Authenticator plugin for Certbot
 description: TBC
 confinement: strict
 grade: devel
+base: core18
 
 parts:
   certbot-dns-dnsimple:
     plugin: python
-    source: git://github.com/certbot/certbot
-    source-branch: master
-    source-subdir: certbot-dns-dnsimple
+    source: .
+    constraints: [$SNAPCRAFT_PART_SRC/constraints.txt]
     python-version: python3
 
 slots:
