@@ -69,7 +69,7 @@ These steps need to be done once to set up your VM and do not need to be run aga
 
 These are the steps to build and install the snaps. If you have run these steps before, you may want to run the command in the section below to clean things up before building the snap again.
 
- 1. Run `tools/strip_hashes.py letsencrypt-auto-source/pieces/dependency-requirements.txt > constraints.txt` (this is a workaround for https://github.com/basak/certbot-snap-build/issues/13).
+ 1. Run `tools/strip_hashes.py letsencrypt-auto-source/pieces/dependency-requirements.txt > constraints.txt` (this is a workaround for https://github.com/certbot/certbot/issues/7957).
  2. Run `snapcraft --use-lxd`.
  3. Install the generated snap with `sudo snap install --dangerous --classic certbot_*_amd64.snap`. You can transfer the snap to a different machine to run it there instead if you prefer.
  4. Run `tools/strip_hashes.py letsencrypt-auto-source/pieces/dependency-requirements.txt > certbot-dns-dnsimple/constraints.txt`.
@@ -112,4 +112,4 @@ coming from the same publisher will be permitted.
 
 ## Outstanding issues
 
-[Outstanding items relating to plugin support in Certbot snaps are tracked on GitHub](https://github.com/basak/certbot-snap-build/issues?q=is%3Aissue+is%3Aopen+label%3Aplugin).
+[Outstanding items relating to plugin support in Certbot snaps are tracked on GitHub](https://github.com/certbot/certbot/issues?q=is%3Aopen+is%3Aissue+label%3A%22area%3A+snaps%22).
