@@ -67,7 +67,7 @@ These steps need to be done once to set up your VM and do not need to be run aga
 
 ### Build the Snaps
 
-These are the steps to build and install the snaps. If you have run these steps before, you may want to run the command in the section below to clean things up before building the snap again.
+These are the steps to build and install the snaps. If you have run these steps before, you may want to run the commands in the section below to clean things up before building the snap again.
 
  1. Run `tools/strip_hashes.py letsencrypt-auto-source/pieces/dependency-requirements.txt > constraints.txt` (this is a workaround for https://github.com/certbot/certbot/issues/7957).
  2. Run `snapcraft --use-lxd`.
