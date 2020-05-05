@@ -104,11 +104,10 @@ As implemented, Certbot will only load plugins connected via the snap interface
 mechanism, so permission is effectively delegated to what interface connections
 the snap infrastucture will permit.
 
-I am not clear as to exactly what is and isn't currently permitted, and what
-interfaces can or cannot be set to be automatically connected.
-
-It seems fairly clear that, at a minimum, a manual connection between snaps
-coming from the same publisher will be permitted.
+We have approval from the snap team to use this design as long as we make it
+more explicit what a user is agreeing to when they connect a plugin to the
+Certbot snap. That work is tracked by
+https://github.com/certbot/certbot/issues/7667.
 
 ## Outstanding issues
 
