@@ -2,7 +2,24 @@
 
 Certbot adheres to [Semantic Versioning](https://semver.org/).
 
-## 1.4.0 - master
+## 1.5.0 - master
+
+### Added
+
+*
+
+### Changed
+
+* Improved error message in apache installer when mod_ssl is not available.
+
+### Fixed
+
+* Add support for OCSP responses which use a public key hash ResponderID, fixing
+  interoperability with Sectigo CAs.
+
+More details about these changes can be found on our GitHub repo.
+
+## 1.4.0 - 2020-05-05
 
 ### Added
 
@@ -20,9 +37,11 @@ Certbot adheres to [Semantic Versioning](https://semver.org/).
 
 ### Changed
 
+* Reorganized error message when a user entered an invalid email address.
 * Stop asking interactively if the user would like to add a redirect.
 * `mock` dependency is now conditional on Python 2 in all of our packages.
 * Deprecate certbot-auto on Gentoo, macOS, and FreeBSD.
+* Allow existing but empty archive and live dir to be used when creating new lineage.
 
 ### Fixed
 
