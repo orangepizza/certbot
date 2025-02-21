@@ -69,6 +69,16 @@ def _build_pebble_config(workspace: str, http_01_port: int, assets_path: str) ->
                 'httpPort': http_01_port,
                 'tlsPort': 5001,
                 'ocspResponderURL': 'http://127.0.0.1:{0}'.format(MOCK_OCSP_SERVER_PORT),
+                'profiles': {
+                    'default': {
+                        'description': 'The profile you know and love',
+                        'validityPeriod': 10,
+                    },
+                    'shortlived': {
+                        'description': 'A short-lived cert profile, without actual enforcement',
+                        'validityPeriod': 5,
+                    },
+                },
             },
         }))
 
